@@ -14,4 +14,14 @@ class District extends Model
     protected $fillable = [
         'name', 'city_id'
     ];
+
+    /**
+     * city
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function city()
+    {
+        return $this->belongsTo(City::class);
+    }
 }
