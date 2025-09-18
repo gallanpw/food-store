@@ -20,4 +20,24 @@ class Product extends Model
         'price',
         'weight'
     ];
+
+    /**
+     * category
+     *
+     * @return void
+     */
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    /**
+     * ratings
+     *
+     * @return void
+     */
+    public function ratings()
+    {
+        return $this->hasMany(Rating::class);
+    }
 }
