@@ -18,4 +18,14 @@ class Rating extends Model
         'rating',
         'review',
     ];
+
+    /**
+     * customer
+     *
+     * @return void
+     */
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class);
+    }
 }
